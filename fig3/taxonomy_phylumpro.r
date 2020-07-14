@@ -148,7 +148,7 @@ ggsave("tax_stack_phylumpro_top9.pdf", p, width = 8, height = 5)
 
 
 # 绘制冲击图alluvium
-p = ggplot(data = data_all, aes(x = variable, weight = value, alluvium = phylumpro)) +
+p = ggplot(data = data_all, aes(x = variable, y = value, alluvium = phylumpro)) +
   geom_alluvium(aes(fill = phylumpro, colour = phylumpro, colour = phylumpro), alpha = .75) +
   main_theme + theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   ggtitle("Phylum and class changes among groups")
